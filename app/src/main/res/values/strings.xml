@@ -1,0 +1,30 @@
+<resources>
+    <!-- App name String!-->
+    <string name="dr_app_name">Doctor Appointment</string>
+
+    <!-- Registration Related String!-->
+    <string name="dr_hint_email">Email</string>
+    <string name="dr_hint_password">Password</string>
+    <string name="dr_hint_username">Username</string>
+    <string name="dr_button_next">Next</string>
+    <string name="dr_button_cancel">Cancel</string>
+    <string name="dr_error_length_password">Password must contain be between 8 to 13 characters</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="new_here_sign_up">New Member? Sign Up</string>
+    <string name="dr_sign_in">Sign In</string>
+    <string name="dr_sign_up">Sign Up</string>
+    <string name="have_account_sign_in">Already have account? Sign In</string>
+    <string name="dr_log_out">Log Out</string>
+    <string name="dr_view_profile">View Profile</string>
+
+
+    <!--Product Related Strings !-->
+    <string name="dr_filter_title">Filter</string>
+    <string name="dr_search_title">Search</string>
+    <string name="dr_product_title">Title</string>
+    <string name="dr_product_description">Secondary text</string>
+    <string name="dr_settings">Settings</string>
+    <string name="dr_hint_age">Age</string>
+    <string name="dr_hint_last_name">Last Name</string>
+    <string name="dr_hint_first_name">First Name</string>
+</resources>
