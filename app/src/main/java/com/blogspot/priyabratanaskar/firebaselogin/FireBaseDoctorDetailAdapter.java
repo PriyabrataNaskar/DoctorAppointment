@@ -3,6 +3,7 @@ package com.blogspot.priyabratanaskar.firebaselogin;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,9 +29,17 @@ public class FireBaseDoctorDetailAdapter extends FirebaseRecyclerAdapter<DoctorD
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull FirebaseDoctorDetailViewHolder holder, int position, @NonNull DoctorDetailModel model) {
+    protected void onBindViewHolder(@NonNull final FirebaseDoctorDetailViewHolder holder, int position, @NonNull DoctorDetailModel model) {
         holder.bindTo(model);
         //Toast.makeText(holder.itemView.getContext(),model.getDayName(),Toast.LENGTH_SHORT).show();
+        holder.itemView.findViewById(R.id.booking_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CheckBox checkBox = holder.itemView.findViewById(R.id.booking_button);
+                checkBox.setChecked(false);
+                Toast.makeText(checkBox.getContext(),"Booking Successful", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @NonNull
@@ -56,7 +65,7 @@ public class FireBaseDoctorDetailAdapter extends FirebaseRecyclerAdapter<DoctorD
         }
 
         void bindTo(DoctorDetailModel model) {
-            Toast.makeText(dayName.getContext(),"Name: " + model.getDay_name(),Toast.LENGTH_SHORT).show();
+            //Toast.makeText(dayName.getContext(),"Name: " + model.getDay_name(),Toast.LENGTH_SHORT).show();
             dayName.setText(model.getDay_name());
             timeTextView.setText(model.getStart_time() + " - "+ model.getEnd_time());
             locationTextView.setText(model.getLocation());

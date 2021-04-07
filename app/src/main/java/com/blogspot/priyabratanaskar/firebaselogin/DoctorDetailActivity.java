@@ -92,7 +92,7 @@ public class DoctorDetailActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         try {
             databaseReference = FirebaseDatabase.getInstance().getReference("doctor_detail/"+ "doctor_id_" + position);
-            Toast.makeText(this,"Position" + position,Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this,"Position" + position,Toast.LENGTH_SHORT).show();
 
         } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -110,7 +110,7 @@ public class DoctorDetailActivity extends AppCompatActivity {
             firebaseDoctorDetailAdapter = new FireBaseDoctorDetailAdapter(options);
             mRecyclerView.setAdapter(firebaseDoctorDetailAdapter);
 
-            Toast.makeText(this,options.getSnapshots().get(0).getDay_name(),Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this,options.getSnapshots().get(0).getDay_name(),Toast.LENGTH_SHORT).show();
 
             //mDoctorData = new ArrayList<>();
         } catch (Exception e) {
