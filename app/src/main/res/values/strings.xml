@@ -1,6 +1,6 @@
 <resources>
     <!-- App name String!-->
-    <string name="dr_app_name">Doctor Appointment</string>
+    <string name="dr_app_name">Life</string>
 
     <!-- Registration Related String!-->
     <string name="dr_hint_email">Email</string>
@@ -27,4 +27,5 @@
     <string name="dr_hint_age">Age</string>
     <string name="dr_hint_last_name">Last Name</string>
     <string name="dr_hint_first_name">First Name</string>
+    <string name="dr_news">Health News</string>
 </resources>
