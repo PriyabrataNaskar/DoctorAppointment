@@ -9,4 +9,7 @@ public class Constants {
     public static String doctorExperience = "experience";
     public static String doctorQualification = "qualification";
     public static String tag ="tag";
+    public static String position ="position";
+    public static String fees ="fees";
+    public static String about ="about";
 }

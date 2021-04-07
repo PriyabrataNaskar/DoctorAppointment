@@ -7,6 +7,8 @@ public class Doctor {
     private String doctorExperience;
     private String doctorQualification;
     private String tag;
+    private String about;
+    private String fees;
     public Doctor() {
         //Required Empty Constructor for Firebase UI
     }
@@ -36,6 +38,14 @@ public class Doctor {
 
     public String getTag(){ return tag;}
 
+    public String getAbout() {
+        return about;
+    }
+
+    public String getFees() {
+        return fees;
+    }
+
     public void setImageResource(String imageResource) {
         this.imageResource = imageResource;
     }
@@ -53,5 +63,13 @@ public class Doctor {
     }
     public void setTag(String tag){
         this.tag = tag;
+    }
+
+    public void setAbout(String about) {
+        this.about = about;
+    }
+
+    public void setFees(String fees) {
+        this.fees = fees;
     }
 }

@@ -24,69 +24,85 @@
         android:id="@+id/guide_line30"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        app:layout_constraintGuide_percent=".3"
-        android:orientation="vertical"/>
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".3" />
 
     <ImageView
-        tools:src="@drawable/dr_logo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appbar"
-        app:layout_constraintEnd_toEndOf="@id/guide_line30"
-        android:layout_width="wrap_content"
+        android:id="@+id/doctor_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
         android:minWidth="100dp"
-        android:layout_height="wrap_content"/>
+        android:src="@drawable/dr_logo"
+        app:layout_constraintEnd_toEndOf="@id/guide_line30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar" />
+
+    <ProgressBar
+        android:id="@+id/doctor_image_progress"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:minWidth="100dp"
+        app:layout_constraintEnd_toEndOf="@id/guide_line30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar" />
 
     <TextView
         android:id="@+id/name"
-        app:layout_constraintTop_toBottomOf="@id/appbar"
-        app:layout_constraintStart_toEndOf="@id/guide_line30"
-        app:layout_constraintEnd_toEndOf="parent"
         style="@style/TextAppearance.MaterialComponents.Headline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dr. S Biswas"/>
+        android:layout_marginBottom="8dp"
+        android:text="Dr. S Biswas"
+        app:layout_constraintBottom_toTopOf="@id/specialization"
+        app:layout_constraintStart_toEndOf="@id/guide_line30"
+        app:layout_constraintTop_toBottomOf="@id/appbar" />
 
     <TextView
         android:id="@+id/specialization"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/name"
+        android:text="MBBS, Heart Specilization"
+        app:layout_constraintBottom_toTopOf="@id/about"
         app:layout_constraintStart_toEndOf="@id/guide_line30"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="MBBS, Heart Specilization"/>
+        app:layout_constraintTop_toBottomOf="@id/name" />
 
     <TextView
         android:id="@+id/fees"
+        style="@style/TextAppearance.MaterialComponents.Overline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/specialization"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="500 rs"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/about"
         app:layout_constraintEnd_toEndOf="@id/guide_line30"
-        android:text="500rs"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/doctor_image" />
 
     <TextView
-        android:id="@+id/location"
+        android:id="@+id/about"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/TextAppearance.MaterialComponents.Subtitle1"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/fees"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"
+        android:text="About Doctor text lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum..."
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Park Street, Kolkata, WB"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fees" />
 
     <TextView
         android:id="@+id/schedule"
+        style="@style/TextAppearance.MaterialComponents.Overline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/TextAppearance.MaterialComponents.Overline"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/location"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="8dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="Schedule"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Schedule"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/about" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
@@ -94,5 +110,6 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/schedule"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:listitem="@layout/schedule_item" />
 </androidx.constraintlayout.widget.ConstraintLayout>

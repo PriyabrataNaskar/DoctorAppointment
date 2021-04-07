@@ -42,6 +42,9 @@ public class FirebaseDoctorAdapter extends FirebaseRecyclerAdapter<Doctor,Fireba
                 intent.putExtra(Constants.doctorExperience,model.getDoctorExperience());
                 intent.putExtra(Constants.doctorQualification,model.getDoctorQualification());
                 intent.putExtra(Constants.imageResource,model.getImageResource());
+                intent.putExtra(Constants.position, position);
+                intent.putExtra(Constants.fees,model.getFees());
+                intent.putExtra(Constants.about,model.getAbout());
                 v.getContext().startActivity(intent);
             }
         });

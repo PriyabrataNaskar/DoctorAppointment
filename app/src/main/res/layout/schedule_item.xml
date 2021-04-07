@@ -6,23 +6,17 @@
     android:layout_height="100dp"
     android:padding="8dp">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/day_name"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:elevation="4dp"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
         <TextView
+            android:id="@+id/day_name_text"
             style="@style/TextAppearance.MaterialComponents.Headline5"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guide_line30"
             android:gravity="center"
             tools:text="Monday" />
-    </androidx.cardview.widget.CardView>
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide_line"
         android:layout_width="match_parent"
@@ -36,33 +30,40 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/day_name"
+        app:layout_constraintStart_toEndOf="@id/day_name_text"
         app:layout_constraintTop_toBottomOf="@id/guide_line"
         tools:text="8:00 - 10:00 " />
 
     <TextView
-        style="@style/TextAppearance.MaterialComponents.Overline"
+        android:id="@+id/location"
+        style="@style/TextAppearance.MaterialComponents.Subtitle1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@id/guide_line"
-        app:layout_constraintStart_toEndOf="@id/day_name"
+        app:layout_constraintStart_toEndOf="@id/day_name_text"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Heart Specialist" />
+        tools:text="College Street, Kolkata, WB" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide_line70"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent=".75" />
-
+        app:layout_constraintGuide_percent=".70" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line30"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".30" />
     <CheckBox
         android:id="@+id/share_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        android:text="Book Online"
         app:layout_constraintTop_toTopOf="parent"
         android:button="@android:drawable/ic_menu_my_calendar"
         app:layout_constraintBottom_toBottomOf="parent"
