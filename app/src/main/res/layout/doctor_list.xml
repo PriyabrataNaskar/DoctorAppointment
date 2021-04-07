@@ -23,7 +23,7 @@
         <ImageView
             android:id="@+id/doctor_image"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="?attr/colorPrimaryDark"
             android:minWidth="160dp"
             android:minHeight="160dp"
@@ -34,7 +34,7 @@
             android:id="@+id/doctor_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:layout_toEndOf="@id/doctor_card"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
             tools:text="Dr. Place Holder" />
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/doctor_name"
             android:layout_toEndOf="@id/doctor_card"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
             tools:text="MBBS, MD" />
 
         <TextView
@@ -55,7 +55,23 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/doctor_qualification"
             android:layout_toEndOf="@id/doctor_card"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
             tools:text="5+ yrs" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/doctor_chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/doctor_card"
+            android:layout_toEndOf="@id/doctor_card"
+            android:textColor="@android:color/white"
+            app:chipBackgroundColor="@color/colorPrimary"
+            android:text="Allopathy"/>
+        <CheckBox
+            android:id="@+id/share_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@android:drawable/ic_menu_share"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
     </RelativeLayout>
 </com.google.android.material.card.MaterialCardView>

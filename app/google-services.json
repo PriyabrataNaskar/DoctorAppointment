@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "414557573944",
+    "firebase_url": "https://fir-login-priyabrata.firebaseio.com",
+    "project_id": "fir-login-priyabrata",
+    "storage_bucket": "fir-login-priyabrata.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414557573944:android:858bda02d0b093be5667cd",
+        "android_client_info": {
+          "package_name": "com.blogspot.priyabratanaskar.firebaselogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "414557573944-t6i0641arg6hkb19i5f32vp6b4huonvu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGLaVrO1Bsra_DundvB9nUgumQGyNxPxQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "414557573944-t6i0641arg6hkb19i5f32vp6b4huonvu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

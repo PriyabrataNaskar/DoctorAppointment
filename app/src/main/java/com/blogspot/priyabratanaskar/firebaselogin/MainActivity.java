@@ -1,27 +1,22 @@
 package com.blogspot.priyabratanaskar.firebaselogin;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-
-import java.util.ArrayList;
-import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
@@ -43,20 +38,27 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         mAuth = FirebaseAuth.getInstance();
-        databaseReference = FirebaseDatabase.getInstance().getReference("doctor");
-
+        try {
+            databaseReference = FirebaseDatabase.getInstance().getReference("doctor");
+        } catch (Exception e) {
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
         //storageReference = FirebaseStorage.getInstance().getReference().child("DoctorImages/");
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         //It's a class provided by FirebaseUI to make a query to fetch appropriate data
-        FirebaseRecyclerOptions<Doctor> options = new FirebaseRecyclerOptions
-                .Builder<Doctor>().setQuery(databaseReference, Doctor.class).build();
+        try {
+            FirebaseRecyclerOptions<Doctor> options = new FirebaseRecyclerOptions
+                    .Builder<Doctor>().setQuery(databaseReference, Doctor.class).build();
 
-        firebaseDoctorAdapter = new FirebaseDoctorAdapter(options);
-        mRecyclerView.setAdapter(firebaseDoctorAdapter);
-        //mDoctorData = new ArrayList<>();
 
+            firebaseDoctorAdapter = new FirebaseDoctorAdapter(options);
+            mRecyclerView.setAdapter(firebaseDoctorAdapter);
+            //mDoctorData = new ArrayList<>();
+        } catch (Exception e) {
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
         //mDoctorAdapter = new DoctorAdapter(mDoctorData,this);
         //mRecyclerView.setAdapter(mDoctorAdapter);
 
@@ -77,12 +79,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
-        if(mAuth.getCurrentUser()==null){
+        if (mAuth.getCurrentUser() == null) {
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
             finish();
-        }
-        else {
+        } else {
             firebaseDoctorAdapter.startListening();
         }
     }
@@ -97,18 +98,18 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main,menu);
+        inflater.inflate(R.menu.main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         super.onOptionsItemSelected(item);
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.menu_log_out:
                 FirebaseAuth
                         .getInstance().signOut();
-                Intent intent = new Intent(this,LoginActivity.class);
+                Intent intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
                 finish();
                 break;
