@@ -1,6 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/newsImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:id="@+id/news_title"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="@android:color/black"
+            android:maxLines="2"
+            android:layout_alignBottom="@id/newsImage"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            android:text="@string/title_placeholder" />
+
+        <TextView
+            android:id="@+id/author_title"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newsImage"
+            android:textColor="?android:textColorSecondary"
+            android:padding="8dp"
+            android:text="@string/news_placeholder" />
+
+        <TextView
+            android:id="@+id/description_view"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/author_title"
+            android:padding="8dp"
+            android:maxLines="2"
+            android:text="@string/sports_info_placeholder" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

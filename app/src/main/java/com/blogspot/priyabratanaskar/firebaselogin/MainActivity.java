@@ -116,6 +116,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu_my_profile:
                 startActivity(new Intent(this, ProfileActivity.class));
                 break;
+            case R.id.menu_news:
+                startActivity(new Intent(this,NewsActivity.class));
+                break;
         }
         return true;
     }

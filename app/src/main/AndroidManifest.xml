@@ -12,7 +12,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Dr">
-        <activity android:name=".DoctorDetailActivity"></activity>
+        <activity android:name=".NewsActivity"></activity>
+        <activity android:name=".DoctorDetailActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".MainActivity" />

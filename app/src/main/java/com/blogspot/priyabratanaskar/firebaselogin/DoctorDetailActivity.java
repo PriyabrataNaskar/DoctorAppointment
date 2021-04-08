@@ -19,6 +19,7 @@ import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -31,6 +32,7 @@ public class DoctorDetailActivity extends AppCompatActivity {
     TextView doctorFees;
     TextView doctorAbout;
 
+    MaterialButton button;
     FirebaseAuth mAuth;
 
     private RecyclerView mRecyclerView;
@@ -52,6 +54,7 @@ public class DoctorDetailActivity extends AppCompatActivity {
         specializationTextView = findViewById(R.id.specialization);
         doctorFees =findViewById(R.id.fees);
         doctorAbout = findViewById(R.id.about);
+        button = findViewById(R.id.button);
 
         Intent intent = getIntent();
         Doctor doctor = new Doctor();
@@ -83,6 +86,12 @@ public class DoctorDetailActivity extends AppCompatActivity {
             }
         }).centerCrop().into(doctorImage);
 
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), "Offline Booking Success",Toast.LENGTH_SHORT).show();
+            }
+        });
         doctorName.setText(name);
         specializationTextView.setText(qualification + " " + experience + "+ years of experience");
         doctorFees.setText(fees);

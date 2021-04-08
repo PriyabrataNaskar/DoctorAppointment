@@ -28,4 +28,8 @@
     <string name="dr_hint_last_name">Last Name</string>
     <string name="dr_hint_first_name">First Name</string>
     <string name="dr_news">Health News</string>
+    <string name="title_placeholder">A look at the changing profile of disease, post Covid-19 - BusinessLine</string>
+    <string name="sports_info_placeholder">Covid infection could change the country’s heart-health profile, besides causing long-term damage to the lungs, kidney and pancreas among other organs</string>
+    <string name="news_placeholder">Author: Dr Ramakanta Panda</string>
+    <string name="no_results">No Results</string>
 </resources>
