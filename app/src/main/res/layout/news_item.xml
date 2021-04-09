@@ -1,7 +1,7 @@
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="8dp">
 
     <RelativeLayout
@@ -12,7 +12,8 @@
             android:id="@+id/newsImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/logo"
+            tools:src="@drawable/logo"
+            android:contentDescription="News Image"
             android:adjustViewBounds="true"/>
 
         <TextView
@@ -25,7 +26,7 @@
             android:maxLines="2"
             android:layout_alignBottom="@id/newsImage"
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
-            android:text="@string/title_placeholder" />
+            tools:text="@string/title_placeholder" />
 
         <TextView
             android:id="@+id/author_title"
@@ -35,7 +36,7 @@
             android:layout_below="@id/newsImage"
             android:textColor="?android:textColorSecondary"
             android:padding="8dp"
-            android:text="@string/news_placeholder" />
+            tools:text="@string/news_placeholder" />
 
         <TextView
             android:id="@+id/description_view"
@@ -45,7 +46,7 @@
             android:layout_below="@id/author_title"
             android:padding="8dp"
             android:maxLines="2"
-            android:text="@string/sports_info_placeholder" />
+            tools:text="@string/sports_info_placeholder" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
