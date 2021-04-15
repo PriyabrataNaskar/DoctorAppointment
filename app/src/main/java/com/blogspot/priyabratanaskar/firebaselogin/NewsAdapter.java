@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Priyabrata Naskar on 08-04-2021.
@@ -21,10 +22,10 @@ import java.util.ArrayList;
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
     // Member variables.
-    private ArrayList<News> mNewsData;
+    private List<Article> mNewsData;
     private Context mContext;
 
-    public NewsAdapter(ArrayList<News> mNewsData, Context mContext) {
+    public NewsAdapter(List<Article> mNewsData, Context mContext) {
         this.mNewsData = mNewsData;
         this.mContext = mContext;
     }
@@ -39,7 +40,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull NewsAdapter.ViewHolder holder, int position) {
         // Get current sport.
-        News currentNews = mNewsData.get(position);
+        Article currentNews = mNewsData.get(position);
 
         // Populate the textviews with data.
         holder.bindTo(currentNews);
@@ -74,9 +75,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
         }
 
-        public void bindTo(News currentNews) {
+        public void bindTo(Article currentNews) {
             mNewsTitleText.setText(currentNews.getNewsTitle());
-            mAuthorTitle.setText("Author: " + currentNews.getNewsAuthorName());
+            mAuthorTitle.setText(currentNews.getNewsAuthorName());
             mDescription.setText(Html.fromHtml(currentNews.getNewsDescription()).toString());
 
             // Load the images into the ImageView using the Glide library.
