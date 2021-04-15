@@ -82,7 +82,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
             // Load the images into the ImageView using the Glide library.
             Glide.with(mContext).load(
                     currentNews.getNewsImageResource()).into(mNewsImage);
-            mNewsImage.setAlpha(0.5f);
         }
     }
 }
