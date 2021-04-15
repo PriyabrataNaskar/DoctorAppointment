@@ -15,4 +15,5 @@ public class Constants {
     public static final String countryIndia = "in";
     public static final String newsCategory = "health";
     public static final String APIKey = "84a9ce0f3b9040bf8edf144d10a95708";
+    public static final String BASE_URL = "https://newsapi.org/v2/";
 }

@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.blogspot.priyabratanaskar.firebaselogin.utils.Constants;
@@ -14,6 +15,7 @@ import com.blogspot.priyabratanaskar.firebaselogin.adapters.NewsAdapter;
 import com.blogspot.priyabratanaskar.firebaselogin.model.Article;
 import com.blogspot.priyabratanaskar.firebaselogin.model.ResponseModel;
 import com.blogspot.priyabratanaskar.firebaselogin.model.SourceModel;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,11 +32,13 @@ public class NewsActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private List<Article> mNewsData;
     private NewsAdapter mAdapter;
+    private FloatingActionButton refreshFab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
+        refreshFab = findViewById(R.id.reload_fab);
         // Initialize the RecyclerView.
         mRecyclerView = findViewById(R.id.recyclerView);
 
@@ -44,6 +48,12 @@ public class NewsActivity extends AppCompatActivity {
         // Initialize the ArrayList that will contain the data.
         mNewsData = new ArrayList<>();
 
+        refreshFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loadNews();
+            }
+        });
         loadNews();
 
         // Get the data.
@@ -56,7 +66,7 @@ public class NewsActivity extends AppCompatActivity {
      */
     private void loadNews(){
         Retrofit retrofit = new Retrofit.Builder().
-                baseUrl("https://newsapi.org/v2/").
+                baseUrl(Constants.BASE_URL).
                 addConverterFactory(GsonConverterFactory.create()).build();
         JSONPlaceHolderAPI jsonPlaceHolderAPI = retrofit.create(JSONPlaceHolderAPI.class);
 
