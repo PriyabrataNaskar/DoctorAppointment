@@ -1,4 +1,4 @@
-package com.blogspot.priyabratanaskar.firebaselogin;
+package com.blogspot.priyabratanaskar.firebaselogin.model;
 
 public class Doctor {
     //Member variables representing doctor detail

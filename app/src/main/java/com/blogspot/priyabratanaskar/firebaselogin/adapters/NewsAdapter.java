@@ -1,4 +1,4 @@
-package com.blogspot.priyabratanaskar.firebaselogin;
+package com.blogspot.priyabratanaskar.firebaselogin.adapters;
 
 import android.content.Context;
 import android.text.Html;
@@ -11,9 +11,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.blogspot.priyabratanaskar.firebaselogin.R;
+import com.blogspot.priyabratanaskar.firebaselogin.model.Article;
 import com.bumptech.glide.Glide;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

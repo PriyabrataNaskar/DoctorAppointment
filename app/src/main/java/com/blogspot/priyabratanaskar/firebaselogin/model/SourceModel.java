@@ -1,4 +1,4 @@
-package com.blogspot.priyabratanaskar.firebaselogin;
+package com.blogspot.priyabratanaskar.firebaselogin.model;
 
 import com.google.gson.annotations.SerializedName;
 

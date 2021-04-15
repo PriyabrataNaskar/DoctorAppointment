@@ -12,12 +12,12 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Dr">
-        <activity android:name=".NewsActivity"></activity>
-        <activity android:name=".DoctorDetailActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".ui.NewsActivity"></activity>
+        <activity android:name=".ui.DoctorDetailActivity" />
+        <activity android:name=".ui.ProfileActivity" />
+        <activity android:name=".ui.SignUpActivity" />
+        <activity android:name=".ui.MainActivity" />
+        <activity android:name=".ui.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

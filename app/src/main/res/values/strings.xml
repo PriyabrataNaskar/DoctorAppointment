@@ -32,4 +32,6 @@
     <string name="sports_info_placeholder">Covid infection could change the country’s heart-health profile, besides causing long-term damage to the lungs, kidney and pancreas among other organs</string>
     <string name="news_placeholder">Author: Dr Ramakanta Panda</string>
     <string name="no_results">No Results</string>
+    <string name="news_image">News Image</string>
+    <string name="book_online">Book Online</string>
 </resources>

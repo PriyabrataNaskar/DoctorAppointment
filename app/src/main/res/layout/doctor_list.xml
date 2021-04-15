@@ -27,8 +27,7 @@
             android:background="?attr/colorPrimaryDark"
             android:minWidth="160dp"
             android:minHeight="160dp"
-            android:scaleType="centerCrop"
-            tools:src="@drawable/doctor_icon" />
+            android:scaleType="centerCrop" />
         </androidx.cardview.widget.CardView>
         <TextView
             android:id="@+id/doctor_name"
@@ -65,13 +64,13 @@
             android:layout_toEndOf="@id/doctor_card"
             android:textColor="@android:color/white"
             app:chipBackgroundColor="@color/colorPrimary"
-            android:text="Allopathy"/>
+            tools:text="Allopathy"/>
         <CheckBox
             android:id="@+id/share_check_box"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:button="@android:drawable/ic_menu_share"
             android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"/>
+            android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 </com.google.android.material.card.MaterialCardView>

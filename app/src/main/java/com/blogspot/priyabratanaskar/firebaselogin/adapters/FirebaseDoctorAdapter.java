@@ -1,4 +1,4 @@
-package com.blogspot.priyabratanaskar.firebaselogin;
+package com.blogspot.priyabratanaskar.firebaselogin.adapters;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -7,11 +7,14 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.blogspot.priyabratanaskar.firebaselogin.Constants;
+import com.blogspot.priyabratanaskar.firebaselogin.model.Doctor;
+import com.blogspot.priyabratanaskar.firebaselogin.ui.DoctorDetailActivity;
+import com.blogspot.priyabratanaskar.firebaselogin.R;
 import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -37,7 +40,7 @@ public class FirebaseDoctorAdapter extends FirebaseRecyclerAdapter<Doctor,Fireba
             @Override
             public void onClick(View v) {
                 //Toast.makeText(holder.doctorExperienceText.getContext(), String.valueOf(position),Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(v.getContext(),DoctorDetailActivity.class);
+                Intent intent = new Intent(v.getContext(), DoctorDetailActivity.class);
                 intent.putExtra(Constants.doctorName,model.getDoctorName());
                 intent.putExtra(Constants.doctorExperience,model.getDoctorExperience());
                 intent.putExtra(Constants.doctorQualification,model.getDoctorQualification());

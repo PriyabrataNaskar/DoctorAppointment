@@ -1,11 +1,9 @@
 package com.blogspot.priyabratanaskar.firebaselogin;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.blogspot.priyabratanaskar.firebaselogin.model.ResponseModel;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Query;
 
 /**
  * Created by Priyabrata Naskar on 15-04-2021.

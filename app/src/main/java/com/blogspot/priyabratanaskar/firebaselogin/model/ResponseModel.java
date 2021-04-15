@@ -1,8 +1,8 @@
-package com.blogspot.priyabratanaskar.firebaselogin;
+package com.blogspot.priyabratanaskar.firebaselogin.model;
 
+import com.blogspot.priyabratanaskar.firebaselogin.model.Article;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

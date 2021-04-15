@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             tools:src="@drawable/logo"
             android:alpha=".3"
-            android:contentDescription="News Image"
+            android:contentDescription="@string/news_image"
             android:adjustViewBounds="true"/>
 
         <TextView

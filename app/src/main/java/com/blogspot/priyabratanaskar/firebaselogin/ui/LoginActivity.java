@@ -1,4 +1,4 @@
-package com.blogspot.priyabratanaskar.firebaselogin;
+package com.blogspot.priyabratanaskar.firebaselogin.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.blogspot.priyabratanaskar.firebaselogin.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
@@ -29,7 +30,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     TextInputEditText emailEditText;
 
     FirebaseAuth mAuth;
-    private static String TAG="com.blogspot.priyabratanaskar.firebaselogin.LoginActivity";
+    private static String TAG="com.blogspot.priyabratanaskar.firebaselogin.ui.LoginActivity";
 
     @Override
     protected void onStart() {
@@ -40,7 +41,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if(mAuth.getCurrentUser() != null){
             Log.e("LoginActivity","OnStart inside if");
             finish();
-            startActivity(new Intent(this,MainActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
         }
     }
 

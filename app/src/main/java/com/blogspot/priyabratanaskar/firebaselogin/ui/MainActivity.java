@@ -1,4 +1,4 @@
-package com.blogspot.priyabratanaskar.firebaselogin;
+package com.blogspot.priyabratanaskar.firebaselogin.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.blogspot.priyabratanaskar.firebaselogin.R;
+import com.blogspot.priyabratanaskar.firebaselogin.adapters.FirebaseDoctorAdapter;
+import com.blogspot.priyabratanaskar.firebaselogin.model.Doctor;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -117,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, ProfileActivity.class));
                 break;
             case R.id.menu_news:
-                startActivity(new Intent(this,NewsActivity.class));
+                startActivity(new Intent(this, NewsActivity.class));
                 break;
         }
         return true;
