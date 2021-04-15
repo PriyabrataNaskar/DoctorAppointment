@@ -13,7 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.blogspot.priyabratanaskar.firebaselogin.Constants;
+import com.blogspot.priyabratanaskar.firebaselogin.utils.Constants;
 import com.blogspot.priyabratanaskar.firebaselogin.R;
 import com.blogspot.priyabratanaskar.firebaselogin.adapters.FireBaseDoctorDetailAdapter;
 import com.blogspot.priyabratanaskar.firebaselogin.model.Doctor;

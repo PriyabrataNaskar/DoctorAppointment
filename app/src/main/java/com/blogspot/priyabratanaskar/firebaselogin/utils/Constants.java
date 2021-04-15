@@ -1,4 +1,4 @@
-package com.blogspot.priyabratanaskar.firebaselogin;
+package com.blogspot.priyabratanaskar.firebaselogin.utils;
 
 /**
  * Created by Priyabrata Naskar on 06-04-2021.

@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.blogspot.priyabratanaskar.firebaselogin.Constants;
+import com.blogspot.priyabratanaskar.firebaselogin.utils.Constants;
 import com.blogspot.priyabratanaskar.firebaselogin.rests.JSONPlaceHolderAPI;
 import com.blogspot.priyabratanaskar.firebaselogin.R;
 import com.blogspot.priyabratanaskar.firebaselogin.adapters.NewsAdapter;

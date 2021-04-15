@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.blogspot.priyabratanaskar.firebaselogin.Constants;
+import com.blogspot.priyabratanaskar.firebaselogin.utils.Constants;
 import com.blogspot.priyabratanaskar.firebaselogin.model.Doctor;
 import com.blogspot.priyabratanaskar.firebaselogin.ui.DoctorDetailActivity;
 import com.blogspot.priyabratanaskar.firebaselogin.R;
