@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.blogspot.priyabratanaskar.firebaselogin.JSONPlaceHolderAPI;
+import com.blogspot.priyabratanaskar.firebaselogin.Constants;
+import com.blogspot.priyabratanaskar.firebaselogin.rests.JSONPlaceHolderAPI;
 import com.blogspot.priyabratanaskar.firebaselogin.R;
 import com.blogspot.priyabratanaskar.firebaselogin.adapters.NewsAdapter;
 import com.blogspot.priyabratanaskar.firebaselogin.model.Article;
@@ -49,15 +50,18 @@ public class NewsActivity extends AppCompatActivity {
         //mAdapter = new NewsAdapter(mNewsData,NewsActivity.this);
         //mRecyclerView.setAdapter(mAdapter);
     }
+
+    /**
+     * Load news from news API
+     */
     private void loadNews(){
         Retrofit retrofit = new Retrofit.Builder().
                 baseUrl("https://newsapi.org/v2/").
                 addConverterFactory(GsonConverterFactory.create()).build();
         JSONPlaceHolderAPI jsonPlaceHolderAPI = retrofit.create(JSONPlaceHolderAPI.class);
 
-        //Call<ResponseModel> call = jsonPlaceHolderAPI.getNews("in","health","84a9ce0f3b9040bf8edf144d10a95708");
+        Call<ResponseModel> call = jsonPlaceHolderAPI.getNews(Constants.countryIndia,Constants.newsCategory,Constants.APIKey);
 
-        Call<ResponseModel> call = jsonPlaceHolderAPI.getResponse();
         call.enqueue(new Callback<ResponseModel>() {
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
