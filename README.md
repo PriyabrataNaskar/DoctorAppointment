@@ -6,6 +6,8 @@
 
 **“Life”** is an Android healthcare assistant application specifically designed to help users book appointments both online and offline. With it's intelligent chat system you can resolve queries, know about doctors, their timings and get health advices
 
+![Life Logo](https://github.com/PriyabrataNaskar/DoctorAppointment/blob/master/app/src/main/res/drawable/logo.PNG)
+
 # Features
 
 This app does the following:
